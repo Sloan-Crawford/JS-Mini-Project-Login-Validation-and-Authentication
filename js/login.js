@@ -7,7 +7,7 @@ class Login {
 
  // when submitted it runs this function:
  validateOnSubmit() {
-  let self = this;
+  let self = this; // to lock the value of this to self (context independent now)
 
   this.form.addEventListener("submit", (e) => {
    e.preventDefault(); // stop automatic submssion of the form
@@ -20,7 +20,7 @@ class Login {
    });
    if(error == 0) {
    // console.log('success');
-   // do login api here
+   // -------- do login api here -----------
    localStorage.setItem("auth", 1); // store an application variable ("key", value)
    this.form.submit();
    }
